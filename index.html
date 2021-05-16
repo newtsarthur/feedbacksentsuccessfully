@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Feedback sent successfully</title>
+    <link rel="icon" type="image/jpg" href="./img/iconbar.png" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="escondido">
+        <ul></ul>
+    </nav>
+    <div class="container">
+        <section>
+            <h1 class="texto">Seu feedback foi enviado com sucesso!✔️</h1>
+        </section>
+    </div>
+
+    <div class="container">
+        <button title="fechar esta página" type="button" class="fechar" onclick="window.close()" id="botao">Fechar</button>
+    </div>
+
+<script>
+    // var capture;
+    function typeWriter(elemento) {
+        const textoArray = elemento.innerHTML.split("");
+        elemento.innerHTML = "";
+        textoArray.forEach((letra, i) => {
+            setTimeout(function() {
+                elemento.innerHTML += letra;
+            }, 75 * i)
+        });
+    }
+
+    const título = document.querySelector('h1');
+    typeWriter(título);
+
+    document.getElementById("botao").onclick = function() {
+        window.close()
+    }
+    
+</script>
+
+</body>
+</html>
